@@ -16,7 +16,7 @@ class ProgramTrainingLink
     #[ORM\Column]
     private ?int $id = null;
 
-    #[ORM\Column(type: Types::GUID)]
+    #[ORM\Column(type: Types::GUID, index: true, unique: true)]
     private ?string $uid = null;
 
     #[ORM\ManyToOne(inversedBy: 'programTrainingLinks')]
